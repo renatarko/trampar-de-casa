@@ -18,7 +18,7 @@ type ValidationSchema = z.infer<typeof validationSchema>;
 const PADDING_X = 32;
 
 export const Hero = () => {
-  const [subscribersCount, setSubscribersCount] = useState(0)
+  const [subscribersCount, setSubscribersCount] = useState(0);
   const { isLoading, withLoading } = useContext(LoadingContext);
 
   const {
@@ -40,15 +40,14 @@ export const Hero = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await fetch(ApiRoutes.Subscribers)
+      const response = await fetch(ApiRoutes.Subscribers);
       if (response.ok) {
-        const count = await response.json()
-        setSubscribersCount(count)
+        const count = await response.json();
+        setSubscribersCount(count);
       }
-    })()
-  }, [])
+    })();
+  }, []);
 
-  
   // TODO: Create loader
   // TODO: Handle error globally
   const saveSubscriber = async () => {
@@ -101,7 +100,7 @@ export const Hero = () => {
                 <div className="w-auto mr-14">
                   <a href="#">
                     <img
-                      src="images/casa.png"
+                      src="images/logo.svg"
                       className="h-[80px]"
                       alt="Logotipo da Trampar De Casa"
                     />
@@ -248,10 +247,14 @@ export const Hero = () => {
                     Vagas remotas no seu e-mail.
                   </h1>
                   <p className="text-lg text-gray-900 font-medium">
-                  Levamos as melhores oportunidades de trampo até você.
+                    Levamos as melhores oportunidades de trampo até você.
                   </p>
                   <div className="h-[24px] mt-5 mb-3">
-                    {Boolean(subscribersCount) && <h4 className="text-gray-900  font-semibold roll-animation">Junte-se a {subscribersCount} inscritos 🚀</h4>}
+                    {Boolean(subscribersCount) && (
+                      <h4 className="text-gray-900  font-semibold roll-animation">
+                        Junte-se a {subscribersCount} inscritos 🚀
+                      </h4>
+                    )}
                   </div>
                   <div className="p-1.5 xl:pl-7 inline-block w-full border-2 border-black rounded-xl focus-within:ring focus-within:ring-indigo-300">
                     <form
