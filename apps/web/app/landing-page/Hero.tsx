@@ -98,7 +98,7 @@ export const Hero = () => {
                 <div className="w-auto mr-14">
                   <a href="#">
                     <img
-                      src="images/casa.png"
+                      src="images/logo.svg"
                       className="h-[80px]"
                       alt="Logotipo da Trampar De Casa"
                     />
@@ -159,7 +159,7 @@ export const Hero = () => {
                     <div className="w-auto p-2">
                       <a className="inline-block" href="#">
                         <img
-                          src="images/casa.png"
+                          src="images/logo.svg"
                           alt="Logo da Trampar de Casa"
                         />
                       </a>
